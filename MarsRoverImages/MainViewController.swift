@@ -12,21 +12,49 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
 
+    var marsPhotos = [Photo]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
+    let dataRequest = MarsPhotosRequest()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
+        getPhotos()
+    }
+
+    func getPhotos() {
+        dataRequest.getPhotos { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let photos):
+                self?.marsPhotos = photos
+
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(marsPhotos.count)
         return 20
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "picCell") as? MarsPictureTableViewCell
+        let photo = marsPhotos[indexPath.row]
+
+        cell?.lblRover.text = photo.rover.name
+        cell?.lblCamera.text = photo.camera.name
+        cell?.lblDate.text = photo.earth_date
 
         return cell ?? UITableViewCell()
     }

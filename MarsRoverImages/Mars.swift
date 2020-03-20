@@ -17,6 +17,27 @@ struct MarsPhotosRequest {
         guard let url = URL(string: apiString) else { fatalError() }
         self.url = url
     }
+
+    func getPhotos(completion: @escaping(Result<[Photo], MarsError>) -> Void) {
+        let request = MarsPhotosRequest()
+
+        let dataTask = URLSession.shared.dataTask(with: request.url){
+            data, URLResponse, error in
+            guard let jsonData = data else {
+                completion(.failure(.noDataAvailable))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let marsResponse = try decoder.decode(MarsPhotos.self, from: jsonData)
+                let marsData = marsResponse.photos
+                completion(.success(marsData))
+            } catch {
+                completion(.failure(.cantProcessData))
+            }
+        }
+        dataTask.resume()
+    }
 }
 
 enum MarsError: Error {
@@ -43,3 +64,4 @@ struct Rover: Decodable {
     var name: String
     let status: String
 }
+
