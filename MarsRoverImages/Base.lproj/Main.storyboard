@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MarsRoverImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4hk-Zv-Pua">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="picCell" rowHeight="200" id="gEw-dp-DgU" customClass="MarsPictureTableViewCell" customModule="MarsRoverImages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gEw-dp-DgU" id="aTd-dl-IpJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rover" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fU2-ca-jPi">
+                                                    <rect key="frame" x="215" y="56" width="169" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-1r-CoL">
+                                                    <rect key="frame" x="215" y="88" width="169" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earth date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-Tt-cy1">
+                                                    <rect key="frame" x="215" y="114" width="169" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.diamond" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fOE-jp-PxN">
+                                                    <rect key="frame" x="30" y="12" width="175" height="176"/>
+                                                    <color key="tintColor" red="0.5568627451" green="0.85490196080000003" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="175" id="4oJ-De-S46"/>
+                                                        <constraint firstAttribute="width" constant="175" id="rgp-i4-ymA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nAd-Tt-cy1" firstAttribute="top" secondItem="G2w-1r-CoL" secondAttribute="bottom" constant="10" id="4Lp-N0-aVZ"/>
+                                                <constraint firstItem="G2w-1r-CoL" firstAttribute="top" secondItem="fU2-ca-jPi" secondAttribute="bottom" constant="10" id="Bhl-gS-ccI"/>
+                                                <constraint firstItem="fOE-jp-PxN" firstAttribute="centerY" secondItem="aTd-dl-IpJ" secondAttribute="centerY" id="Crd-cD-fiv"/>
+                                                <constraint firstItem="fU2-ca-jPi" firstAttribute="top" secondItem="aTd-dl-IpJ" secondAttribute="topMargin" constant="45" id="FKa-aO-m47"/>
+                                                <constraint firstItem="fOE-jp-PxN" firstAttribute="leading" secondItem="aTd-dl-IpJ" secondAttribute="leading" constant="30" id="Jfh-Eb-eVM"/>
+                                                <constraint firstItem="nAd-Tt-cy1" firstAttribute="leading" secondItem="fOE-jp-PxN" secondAttribute="trailing" constant="10" id="Tbs-t3-xxK"/>
+                                                <constraint firstAttribute="trailing" secondItem="nAd-Tt-cy1" secondAttribute="trailing" constant="30" id="W6S-TE-oaQ"/>
+                                                <constraint firstItem="fU2-ca-jPi" firstAttribute="leading" secondItem="fOE-jp-PxN" secondAttribute="trailing" constant="10" id="cp0-df-hxX"/>
+                                                <constraint firstAttribute="trailing" secondItem="fU2-ca-jPi" secondAttribute="trailing" constant="30" id="dsf-Lo-zzF"/>
+                                                <constraint firstItem="G2w-1r-CoL" firstAttribute="leading" secondItem="fOE-jp-PxN" secondAttribute="trailing" constant="10" id="fKi-iK-znV"/>
+                                                <constraint firstAttribute="bottom" secondItem="nAd-Tt-cy1" secondAttribute="bottom" constant="70" id="uOa-YQ-Y6J"/>
+                                                <constraint firstAttribute="trailing" secondItem="G2w-1r-CoL" secondAttribute="trailing" constant="30" id="x4d-3w-X3i"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgMars" destination="fOE-jp-PxN" id="0r3-AM-ovf"/>
+                                            <outlet property="lblCamera" destination="G2w-1r-CoL" id="JFc-Gw-LvN"/>
+                                            <outlet property="lblDate" destination="nAd-Tt-cy1" id="fbU-d1-Tin"/>
+                                            <outlet property="lblRover" destination="fU2-ca-jPi" id="UKA-50-hZd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4hk-Zv-Pua" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AXc-jW-ika"/>
+                            <constraint firstItem="4hk-Zv-Pua" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CIE-kc-xf3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4hk-Zv-Pua" secondAttribute="bottom" id="JqW-0e-CQq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4hk-Zv-Pua" secondAttribute="trailing" id="gWB-C0-Dj5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4hk-Zv-Pua" id="RQb-TL-rSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="questionmark.diamond" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
