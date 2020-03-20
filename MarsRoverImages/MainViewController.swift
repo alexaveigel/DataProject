@@ -12,6 +12,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
 
+    var image: UIImage = UIImage()
+
     var marsPhotos = [Photo]() {
         didSet {
             DispatchQueue.main.async {
@@ -44,14 +46,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(marsPhotos.count)
-        return 20
+        return marsPhotos.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "picCell") as? MarsPictureTableViewCell
         let photo = marsPhotos[indexPath.row]
+        let photoUrl = URL(string: photo.img_src)!
 
+        cell?.imgMars.load(url: photoUrl)
         cell?.lblRover.text = photo.rover.name
         cell?.lblCamera.text = photo.camera.name
         cell?.lblDate.text = photo.earth_date
@@ -62,15 +66,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+

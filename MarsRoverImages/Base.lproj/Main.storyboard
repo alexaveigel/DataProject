@@ -26,9 +26,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rover" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fU2-ca-jPi">
-                                                    <rect key="frame" x="215" y="56" width="169" height="22"/>
-                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rover" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fU2-ca-jPi">
+                                                    <rect key="frame" x="215" y="55" width="169" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="bb3-qc-6hP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -55,15 +58,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nAd-Tt-cy1" firstAttribute="top" secondItem="G2w-1r-CoL" secondAttribute="bottom" constant="10" id="4Lp-N0-aVZ"/>
-                                                <constraint firstItem="G2w-1r-CoL" firstAttribute="top" secondItem="fU2-ca-jPi" secondAttribute="bottom" constant="10" id="Bhl-gS-ccI"/>
                                                 <constraint firstItem="fOE-jp-PxN" firstAttribute="centerY" secondItem="aTd-dl-IpJ" secondAttribute="centerY" id="Crd-cD-fiv"/>
-                                                <constraint firstItem="fU2-ca-jPi" firstAttribute="top" secondItem="aTd-dl-IpJ" secondAttribute="topMargin" constant="45" id="FKa-aO-m47"/>
                                                 <constraint firstItem="fOE-jp-PxN" firstAttribute="leading" secondItem="aTd-dl-IpJ" secondAttribute="leading" constant="30" id="Jfh-Eb-eVM"/>
+                                                <constraint firstItem="G2w-1r-CoL" firstAttribute="top" secondItem="fU2-ca-jPi" secondAttribute="bottom" constant="10" id="KQI-fb-2mV"/>
                                                 <constraint firstItem="nAd-Tt-cy1" firstAttribute="leading" secondItem="fOE-jp-PxN" secondAttribute="trailing" constant="10" id="Tbs-t3-xxK"/>
                                                 <constraint firstAttribute="trailing" secondItem="nAd-Tt-cy1" secondAttribute="trailing" constant="30" id="W6S-TE-oaQ"/>
                                                 <constraint firstItem="fU2-ca-jPi" firstAttribute="leading" secondItem="fOE-jp-PxN" secondAttribute="trailing" constant="10" id="cp0-df-hxX"/>
                                                 <constraint firstAttribute="trailing" secondItem="fU2-ca-jPi" secondAttribute="trailing" constant="30" id="dsf-Lo-zzF"/>
                                                 <constraint firstItem="G2w-1r-CoL" firstAttribute="leading" secondItem="fOE-jp-PxN" secondAttribute="trailing" constant="10" id="fKi-iK-znV"/>
+                                                <constraint firstItem="fU2-ca-jPi" firstAttribute="top" secondItem="aTd-dl-IpJ" secondAttribute="top" constant="55" id="k3T-Dw-2Jt"/>
                                                 <constraint firstAttribute="bottom" secondItem="nAd-Tt-cy1" secondAttribute="bottom" constant="70" id="uOa-YQ-Y6J"/>
                                                 <constraint firstAttribute="trailing" secondItem="G2w-1r-CoL" secondAttribute="trailing" constant="30" id="x4d-3w-X3i"/>
                                             </constraints>

@@ -15,7 +15,6 @@
 		FA2B3B2724240206005DFCA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3B2624240206005DFCA7 /* MainViewController.swift */; };
 		FA2B3B292424031C005DFCA7 /* MarsPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3B282424031C005DFCA7 /* MarsPictureTableViewCell.swift */; };
 		FA2B3B2B24240430005DFCA7 /* Mars.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3B2A24240430005DFCA7 /* Mars.swift */; };
-		FA2B3B2D24241BAA005DFCA7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3B2C24241BAA005DFCA7 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		FA2B3B2624240206005DFCA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA2B3B282424031C005DFCA7 /* MarsPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPictureTableViewCell.swift; sourceTree = "<group>"; };
 		FA2B3B2A24240430005DFCA7 /* Mars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars.swift; sourceTree = "<group>"; };
-		FA2B3B2C24241BAA005DFCA7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				FA2B3B122423FEA5005DFCA7 /* AppDelegate.swift */,
 				FA2B3B142423FEA5005DFCA7 /* SceneDelegate.swift */,
 				FA2B3B182423FEA5005DFCA7 /* Main.storyboard */,
-				FA2B3B2C24241BAA005DFCA7 /* DataManager.swift */,
 				FA2B3B2A24240430005DFCA7 /* Mars.swift */,
 				FA2B3B282424031C005DFCA7 /* MarsPictureTableViewCell.swift */,
 				FA2B3B2624240206005DFCA7 /* MainViewController.swift */,
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2B3B132423FEA5005DFCA7 /* AppDelegate.swift in Sources */,
-				FA2B3B2D24241BAA005DFCA7 /* DataManager.swift in Sources */,
 				FA2B3B2B24240430005DFCA7 /* Mars.swift in Sources */,
 				FA2B3B292424031C005DFCA7 /* MarsPictureTableViewCell.swift in Sources */,
 				FA2B3B152423FEA5005DFCA7 /* SceneDelegate.swift in Sources */,
